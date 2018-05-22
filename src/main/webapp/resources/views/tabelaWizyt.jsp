@@ -55,17 +55,7 @@
                                 <c:if test="${!visit.status.name.equals(\"Brak\")}">
                                     ${visit.status.name}
                                     <c:if test="${!visit.status.name.equals(\"Zajeta\")}">
-                                        <%--<form action="specjalista" method="post">
-                                            <input type="hidden" firstName="visit" value="${visit}">
-                                            <input type="submit" value="zarejestruj się">
-                                        </form>--%>
 
-                                        <%--<form action="specjalista" method="post">
-                                            <input type="hidden" firstName="time" value="${visit.hourOfVisit}">
-                                            <input type="hidden" firstName="date" value="${visit.dayOfVisit}">
-                                            <input type="hidden" firstName="doctorId" value="${visit.doctor.id}">
-                                            <input type="submit" value="zarejestruj się">
-                                        </form>--%>
 
                                         <form:form action="specjalista" modelAttribute="registerDto" method="POST">
                                             <form:input type="hidden" path="date" value="${visit.dayOfVisit}"/>
@@ -74,7 +64,6 @@
                                             <input type="submit" name="register" value="zarejestruj się">
                                         </form:form>
 
-                                        <%--<a href="${pageContext.servletContext.contextPath}/rejestracja/specjalista/${visit.hourOfVisit}/${visit.dayOfVisit}/${visit.doctor.id}">zarejestruj się</a>--%>
 
                                     </c:if>
                                 </c:if>
@@ -102,7 +91,6 @@
         </form>
         <br>
         <div>
-            <%--<a href="${pageContext.servletContext.contextPath}/rejestracja/nastepnyDzien/${dateOfVisits}">następny dzień</a>--%>
             <form action="specjalista" method="GET">
                 Wybierz datę wizyty: <input title="date" name="date" type="date" value="${dateOfVisits}">
                 <input type="hidden" name="specType" value="${specType}">

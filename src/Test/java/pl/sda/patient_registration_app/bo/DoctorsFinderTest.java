@@ -91,7 +91,7 @@ public class DoctorsFinderTest {
                 .id((long) 1)
                 .firstName("Adam")
                 .lastName("Nowak")
-                .email("adam@doctor@com")
+                .email("adam@doctor.com")
                 .build();
 
         Mockito.when(doctorsRepository.findFirstByLogin("Adam")).thenReturn(doctorAdam);

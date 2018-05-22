@@ -31,7 +31,7 @@
             <c:forEach items="${wizyty}" var="wizyta">
                 <li class="b">${wizyta.dayOfVisit},
                         ${wizyta.hourOfVisit},
-                    Dr. ${wizyta.doctor.lastName}</li>
+                    Dr. ${wizyta.doctor.firstName} ${wizyta.doctor.lastName}</li>
             </c:forEach>
 
         </ul>

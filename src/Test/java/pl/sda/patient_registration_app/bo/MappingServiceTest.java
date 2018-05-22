@@ -238,20 +238,19 @@ public class MappingServiceTest {
 
 
     }
+    private class PasswordEncoder implements org.springframework.security.crypto.password.PasswordEncoder {
+
+        @Override
+        public String encode(CharSequence charSequence) {
+            return "1234";
+        }
+
+        @Override
+        public boolean matches(CharSequence charSequence, String s) {
+            return charSequence == s;
+        }
+
+    }
 
 }
 
-class PasswordEncoder implements org.springframework.security.crypto.password.PasswordEncoder {
-
-    @Override
-    public String encode(CharSequence charSequence) {
-        return "1234";
-    }
-
-    @Override
-    public boolean matches(CharSequence charSequence, String s) {
-        return charSequence == s;
-    }
-
-
-}
